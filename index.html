@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Focus</title>
+    <script src="scripts.js" defer></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <section class="section__container">
+        <h1 class="title__container">FOCUS</h1>
+        <section class="section__cronometro">
+            <div id="minutes">00</div>
+            <div>:</div>
+            <div id="seconds">00</div>
+        </section>
+        <div class="button__container">
+            <button class="botao__process activate" id="startButton">Começar</button>
+            <button class="botao__process activate" id="pauseButton">Pausar</button>
+            <button class="botao__process activate" id="continueButton">Continuar</button>
+            <button class="botao__process" id="reseteButton">Resetar</button>
+        </div>
+        <ul class="button__active">
+            <li>
+                <label class="toggle">
+                    <input class="toggle-checkbox" type="checkbox" id="alternar-musica">
+                    <div class="toggle-switch"></div>
+                </label>
+            </li>
+            <li>
+                <label class="text__label" for="alternar-musica">
+                    Música
+                </label>
+            </li>
+        </ul>
+        
+    </section>
+</body>
+</html>

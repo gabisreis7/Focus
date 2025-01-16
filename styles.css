@@ -1,0 +1,172 @@
+@import url('https://fonts.googleapis.com/css2?family=Jersey+15&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+:root{
+    --tipo-fonte-cronometro: 'Jersey 15';
+    --tipo-fonte-titulo: 'Bebas Neue';
+    --tipo-fonte-botoes-aviso: 'Montserrat';
+    --cor-fonte: #ffffff;
+    --cor-fundo-section: rgba(40, 90, 208, 0.50);
+    --cor-botao-activate: rgba(40, 90, 208);
+    --fonte-botao: 15px;
+    --fonte-botao-activate: 20px;
+    --fonte-titulo: 70px;
+    --fonte-aviso: 16px;
+    --fonte-cronometro: 100px;
+    --caminho-imagem: url('/images/fundo\ pomodoro.png');
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    color: var(--cor-fonte);
+    height: 100vh;
+    background: var(--caminho-imagem) no-repeat center center;
+    background-size: cover; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.section__container{
+    border-radius: 30px;
+    background-color: var(--cor-fundo-section);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 2rem;
+    gap: 5rem;
+    width: 30rem;
+    height: 40rem;
+}
+
+.title__container{
+    font-family: var(--tipo-fonte-titulo);
+    font-size: var(--fonte-titulo);
+}
+
+.section__cronometro{
+    display: flex;
+    font-family: var(--tipo-fonte-cronometro);
+    justify-content: center;
+    align-items: center;
+    font-size: 100px;
+}
+
+.button__container{
+    display: flex;
+    gap: 2rem;
+}
+
+.botao__process{
+    padding: 1rem 2rem;
+    border-radius: 30px;
+    font-family: var(--tipo-fonte-botoes-aviso);
+    cursor: pointer;
+    font-size: var(--fonte-botao);
+}
+
+.text__label{
+    font-family: var(--tipo-fonte-botoes-aviso);
+    font-size: var(--fonte-botao-activate);
+    font-weight: 600;
+}
+
+.activate{
+    background-color: var(--cor-botao-activate);
+    border: none;
+    color: var(--cor-fonte);
+    font-weight: 800;
+}
+
+#pauseButton{
+    display: none;
+}
+
+#continueButton{
+    display: none;
+}
+
+#reseteButton{
+    border: none;
+    font-weight: 800;
+    
+}
+
+.button__active{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.6rem;
+}
+
+.toggle {
+    cursor: pointer;
+    display: inline-block;
+}
+
+.toggle-switch {
+    display: inline-block;
+    background: #ccc;
+    border-radius: 1.6rem;
+    width: 5.8rem;
+    height: 3.2rem;
+    position: relative;
+    vertical-align: middle;
+    transition: background 0.25s;
+}
+
+.toggle-switch:before, .toggle-switch:after {
+    content: "";
+}
+
+.toggle-switch:before {
+    display: block;
+    background: linear-gradient(to bottom, #fff 0%, #eee 100%);
+    border-radius: 50%;
+    width: 2.4rem;
+    height: 2.4rem;
+    position: absolute;
+    top: 0.4rem;
+    left: 0.4rem;
+    transition: left 0.25s;
+}
+
+.toggle:hover .toggle-switch:before {
+    background: linear-gradient(to bottom, #fff 0%, #fff 100%);
+}
+
+.toggle-checkbox:checked + .toggle-switch {
+    background: var(--cor-botao-activate);
+}
+
+.toggle-checkbox:checked + .toggle-switch:before {
+    left: 3rem;
+}
+
+.toggle-checkbox {
+    position: absolute;
+    visibility: hidden;
+}
+
+@media (max-width: 1200px){
+    .section__container{
+        width: 20rem;
+        height: 35rem;
+        gap: 4rem;
+    }
+
+    #avisoContagem{
+        font-size: 13px;
+    }
+}
